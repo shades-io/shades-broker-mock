@@ -1,0 +1,19 @@
+{
+  "name": "shades-broker-mock",
+  "version": "0.1.0",
+  "description": "Shades mock broker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shades-io/shades-broker-mock.git"
+  },
+  "author": "shades@netflix.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shades-io/shades-broker-mock/issues"
+  },
+  "homepage": "https://github.com/shades-io/shades-broker-mock#readme"
+}
