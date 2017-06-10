@@ -30,11 +30,11 @@ const create = options => {
     return {
         queue: {
             enqueue,
-            on: onEvent
+            subscribe: onEvent
         },
-        broadcast: {
+        updates: {
             publish,
-            on: onMessage
+            subscribe: onMessage
         }
     };
 };
