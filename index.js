@@ -11,14 +11,20 @@ const create = options => {
         broadcastHandlers.push(handler);
     };
     const publish = (message) => {
-        broadcastHandlers
-            .slice()
-            .forEach(handler => handler(message));
+        process.nextTick(() => {
+            broadcastHandlers
+                .slice()
+                .forEach(handler => handler(message));
+        });
+        return Promise.resolve();
     };
     const enqueue = (event) => {
-        queueHandlers
-            .slice()
-            .forEach(handler => handler(event));
+        process.nextTick(() => {
+            queueHandlers
+                .slice()
+                .forEach(handler => handler(event));
+        });
+        return Promise.resolve();
     };
 
     return {
